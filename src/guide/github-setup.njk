@@ -1,0 +1,51 @@
+---
+layout: layouts/base.njk
+title: GitHub Setup - Made With Claw
+---
+
+<section class="guide">
+  <h1>1. Set Up GitHub Access</h1>
+  <p class="lead">Give your OpenClaw assistant secure access to push code to GitHub.</p>
+
+  <h2>Why SSH Keys?</h2>
+  <p>SSH keys let your assistant interact with GitHub without storing passwords or tokens in chat. It's more secure and only needs to be set up once.</p>
+
+  <h2>What to Tell Your Assistant</h2>
+  <blockquote>
+    "Generate an SSH key for GitHub access."
+  </blockquote>
+
+  <p>Your assistant will:</p>
+  <ol>
+    <li>Generate an SSH key pair on the server</li>
+    <li>Show you the public key</li>
+  </ol>
+
+  <h2>Add the Key to GitHub</h2>
+  <ol>
+    <li>Go to <a href="https://github.com/settings/keys" target="_blank" rel="noopener">GitHub → Settings → SSH and GPG keys</a></li>
+    <li>Click <strong>New SSH key</strong></li>
+    <li>Paste the public key your assistant provided</li>
+    <li>Give it a name like "OpenClaw Server"</li>
+    <li>Click <strong>Add SSH key</strong></li>
+  </ol>
+
+  <p>Tell your assistant:</p>
+  <blockquote>"I've added the SSH key to GitHub."</blockquote>
+
+  <h2>Create Your Repository</h2>
+  <p>Create a new repository on GitHub for your website template:</p>
+  <ol>
+    <li>Go to <a href="https://github.com/new" target="_blank" rel="noopener">GitHub → New repository</a></li>
+    <li>Name it something like <code>website-template</code> or <code>11ty-starter</code></li>
+    <li>Choose Public or Private</li>
+    <li>Don't initialize with README (your assistant will push the initial code)</li>
+  </ol>
+
+  <p>Tell your assistant the repository URL:</p>
+  <blockquote>"The repo is https://github.com/your-org/your-repo-name.git"</blockquote>
+
+  <div class="next-step">
+    <a href="/guide/11ty-template/">Next: Create the 11ty Template →</a>
+  </div>
+</section>

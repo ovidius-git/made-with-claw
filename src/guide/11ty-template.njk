@@ -1,0 +1,79 @@
+---
+layout: layouts/base.njk
+title: 11ty Template - Made With Claw
+---
+
+<section class="guide">
+  <h1>2. Create the 11ty Template</h1>
+  <p class="lead">Build a reusable static site template optimized for marketing websites.</p>
+
+  <h2>Why 11ty?</h2>
+  <ul>
+    <li><strong>Fast:</strong> Generates static HTML — no server-side rendering</li>
+    <li><strong>Simple:</strong> Uses familiar template languages (Nunjucks, Markdown)</li>
+    <li><strong>Flexible:</strong> No framework lock-in</li>
+    <li><strong>SEO-friendly:</strong> Clean HTML output, easy to optimize</li>
+  </ul>
+
+  <h2>What to Tell Your Assistant</h2>
+  <blockquote>
+    "Create an 11ty starter template for marketing websites. Include a base layout, homepage, about page, contact page, and CSS with custom properties for easy theming."
+  </blockquote>
+
+  <p>Your assistant will create:</p>
+
+  <h3>Project Structure</h3>
+  <pre><code>├── src/
+│   ├── _data/
+│   │   └── site.json         # Site-wide config (name, URL, etc.)
+│   ├── _includes/
+│   │   └── layouts/
+│   │       └── base.njk      # Base HTML template
+│   ├── assets/
+│   │   └── css/
+│   │       └── style.css     # Styles with CSS variables
+│   ├── pages/
+│   │   ├── about.njk
+│   │   └── contact.njk
+│   └── index.njk             # Homepage
+├── .eleventy.js              # 11ty configuration
+├── amplify.yml               # AWS Amplify build settings
+└── package.json</code></pre>
+
+  <h2>Key Files</h2>
+
+  <h3>Site Configuration (src/_data/site.json)</h3>
+  <pre><code>{
+  "name": "Your Site Name",
+  "description": "Your site description",
+  "url": "https://yourdomain.com"
+}</code></pre>
+
+  <h3>Amplify Build Config (amplify.yml)</h3>
+  <pre><code>version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: _site
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*</code></pre>
+
+  <h2>Push to GitHub</h2>
+  <p>Once your assistant creates the template, tell them:</p>
+  <blockquote>"Push this to the GitHub repo."</blockquote>
+
+  <p>Your assistant will commit and push the code. You can verify at your repo URL.</p>
+
+  <div class="next-step">
+    <a href="/guide/amplify-setup/">Next: Connect AWS Amplify →</a>
+  </div>
+</section>

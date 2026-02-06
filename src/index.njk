@@ -1,29 +1,66 @@
 ---
-layout: base.njk
-title: Home
-description: Welcome to our site
+layout: layouts/base.njk
+title: Made With Claw - Build Websites with OpenClaw
 ---
 
 <section class="hero">
-  <h1>Welcome to {{ site.name }}</h1>
-  <p class="hero-subtitle">{{ site.description }}</p>
-  <a href="/contact/" class="btn btn-primary">Get in Touch</a>
+  <h1>Build Marketing Websites with OpenClaw</h1>
+  <p class="lead">A complete guide to setting up a templated website stack using 11ty, AWS Amplify, and Route 53 — all managed by your OpenClaw assistant.</p>
 </section>
 
-<section class="features">
-  <h2>What We Do</h2>
-  <div class="feature-grid">
-    <div class="feature">
-      <h3>Feature One</h3>
-      <p>Describe the first key feature or service you offer.</p>
-    </div>
-    <div class="feature">
-      <h3>Feature Two</h3>
-      <p>Describe the second key feature or service you offer.</p>
-    </div>
-    <div class="feature">
-      <h3>Feature Three</h3>
-      <p>Describe the third key feature or service you offer.</p>
-    </div>
+<section class="overview">
+  <h2>What You'll Build</h2>
+  <p>This guide walks you through creating a repeatable website stack that you can clone for each new site. Your OpenClaw assistant handles the heavy lifting — you just provide direction.</p>
+  
+  <div class="stack-overview">
+    <h3>The Stack</h3>
+    <ul>
+      <li><strong>Static Site Generator:</strong> 11ty (Eleventy)</li>
+      <li><strong>Hosting:</strong> AWS Amplify</li>
+      <li><strong>DNS:</strong> AWS Route 53</li>
+      <li><strong>SSL:</strong> Auto-provisioned by Amplify</li>
+      <li><strong>CI/CD:</strong> Auto-deploy on git push</li>
+      <li><strong>PR Previews:</strong> Built-in preview URLs for every pull request</li>
+    </ul>
   </div>
+</section>
+
+<section class="steps">
+  <h2>The Process</h2>
+  
+  <div class="step">
+    <h3>1. Set Up GitHub Access</h3>
+    <p>Configure SSH keys so your assistant can push code to GitHub securely.</p>
+    <a href="/guide/github-setup/">Read the guide →</a>
+  </div>
+
+  <div class="step">
+    <h3>2. Create the 11ty Template</h3>
+    <p>Build a starter template with layouts, styles, and SEO best practices baked in.</p>
+    <a href="/guide/11ty-template/">Read the guide →</a>
+  </div>
+
+  <div class="step">
+    <h3>3. Connect AWS Amplify</h3>
+    <p>Set up hosting with automatic deployments and PR previews.</p>
+    <a href="/guide/amplify-setup/">Read the guide →</a>
+  </div>
+
+  <div class="step">
+    <h3>4. Configure Your Domain</h3>
+    <p>Point your domain to Amplify using Route 53 for DNS.</p>
+    <a href="/guide/domain-setup/">Read the guide →</a>
+  </div>
+
+  <div class="step">
+    <h3>5. Apply SEO Guidelines</h3>
+    <p>Follow our comprehensive SEO checklist for every page you create.</p>
+    <a href="/guide/seo-guidelines/">Read the guide →</a>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to Start?</h2>
+  <p>Open a chat with your OpenClaw assistant and say:</p>
+  <blockquote>"I want to set up a website using the Made With Claw stack. Let's start with GitHub access."</blockquote>
 </section>
