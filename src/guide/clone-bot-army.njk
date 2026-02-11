@@ -65,7 +65,14 @@ title: Clone Your Bot - Build a Bot Army on AWS
         <li><strong>Instance type:</strong> Same as original or adjust (<code>t3.small</code> works for most bots)</li>
         <li><strong>Key pair:</strong> Use existing or create new</li>
         <li><strong>Security group:</strong> Use same security group as original (needs ports 22, 443)</li>
-        <li><strong>Storage:</strong> Keep defaults</li>
+        <li><strong>Storage:</strong> Expand the volume details:
+          <ul>
+            <li>Click <strong>Advanced</strong> in the Storage section</li>
+            <li>Set <strong>Encrypted</strong> → <strong>Yes</strong></li>
+            <li>KMS key: default <code>aws/ebs</code> is fine</li>
+          </ul>
+          <em>This encrypts your API keys at rest.</em>
+        </li>
       </ul>
     </li>
     <li>Click <strong>Launch instance</strong></li>

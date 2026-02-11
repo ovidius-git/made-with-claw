@@ -59,7 +59,10 @@ Once the AMI is available:
    - **Instance type:** Same as original or adjust (t3.small works for most bots)
    - **Key pair:** Use existing or create new
    - **Security group:** Use same security group as original (needs ports 22, 443)
-   - **Storage:** Keep defaults
+   - **Storage:** Click **Advanced** to expand, then:
+     - Set **Encrypted** → **Yes**
+     - KMS key: default `aws/ebs` is fine
+     - *This encrypts your API keys at rest*
 5. Click **Launch instance**
 
 ### Note the New Instance's Public IP
