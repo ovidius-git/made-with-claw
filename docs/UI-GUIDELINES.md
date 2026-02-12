@@ -12,7 +12,7 @@ Animations can improve user engagement and perceived performance when used corre
 - Visual feedback on user interactions (button hover/click states)
 - Guiding attention to calls-to-action
 - Smooth transitions between states (accordion open/close, modal appear)
-- Scroll-triggered content reveals (subtle fade-in, once per element)
+- Page load animations for hero content (once, subtle)
 - Loading states and progress indicators
 
 **Don't use animations for:**
@@ -21,6 +21,7 @@ Animations can improve user engagement and perceived performance when used corre
 - Delayed content that makes users wait
 - Every element on page load (overwhelming)
 - Critical content that users need immediately
+- **Non-clickable elements on hover** — hover animations should only appear on interactive/clickable elements
 
 ### Performance Rules
 
@@ -65,8 +66,12 @@ Animations can improve user engagement and perceived performance when used corre
 ```
 
 #### Hover States
+
+**Important: Only apply hover animations to clickable/interactive elements.**
+Non-clickable elements (static text, images, badges) should NOT animate on hover — this creates false affordance and confuses users about what's interactive.
+
 ```css
-/* Button hover - subtle scale */
+/* Button hover - subtle lift (buttons ARE clickable) */
 .btn {
   transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
 }
@@ -76,14 +81,19 @@ Animations can improve user engagement and perceived performance when used corre
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Card hover - lift effect */
-.card {
+/* Clickable card hover - lift effect */
+a.card, .card-link {
   transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
-.card:hover {
+a.card:hover, .card-link:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Static content - NO hover animation */
+.trust-badge, .static-image, .info-card {
+  /* No transition or hover effects */
 }
 ```
 
