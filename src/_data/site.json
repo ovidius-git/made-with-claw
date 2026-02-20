@@ -1,5 +1,13 @@
 {
-  "name": "Made With Claw",
-  "description": "Build marketing websites with OpenClaw — a complete guide to 11ty, AWS Amplify, and Route 53.",
-  "url": "https://madewithclaw.com"
+  "name": "Scan Dental CAD/CAM Lab",
+  "description": "Laboratoire dentaire numérique à Montpellier - Gabarits chirurgicaux guidés, prothèses zircone, conception Exocad et usinage CNC",
+  "url": "https://scan-dental.fr",
+  "location": "Montpellier",
+  "services": [
+    "Gabarits chirurgicaux guidés",
+    "Prothèses zircone / céramique usinées CNC",
+    "Conception Exocad",
+    "Usinage Roland DWX",
+    "Collaboration avec cliniques et cabinets dentaires"
+  ]
 }
